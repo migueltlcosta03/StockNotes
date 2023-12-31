@@ -1,0 +1,12 @@
+#logo {
+    color: #5c0099;
+}
+
+.nav-link {
+    color: white !important;
+}
+
+.active {
+    background-color: transparent !important;
+    color: #5c0099 !important;
+}

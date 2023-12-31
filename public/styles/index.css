@@ -1,0 +1,56 @@
+* {
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: black;
+}
+
+.welcome-title, .slogan {
+    color: white !important;
+}
+
+.app-name {
+    background: linear-gradient(rgb(188, 12, 241), rgb(92, 0, 153));
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.fade-in-text {
+    font-family: Arial;
+    font-size: 150px;
+    animation: fadeIn 1s;
+  }
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1;}
+  }
+
+.top-3-markets-title {
+    text-align: center;
+    color: white;
+}
+
+.top-card {
+    background-color: white;
+}
+
+.top-card > .category {
+    color: rgba(92, 0, 153, 0.596);
+}
+
+.name {
+    background: linear-gradient(rgb(188, 12, 241), rgb(92, 0, 153));
+    background-clip: text;
+    -webkit-text-fill-color: transparent;;
+}
+
+.view-market-button {
+    background: linear-gradient(rgb(188, 12, 241), rgb(92, 0, 153));
+    border: none;
+}
+
+.view-market-button:hover {
+    box-shadow: inset 30px 30px 30px 30px rgba(0, 0, 0, 0.218);
+}
