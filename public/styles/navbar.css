@@ -1,5 +1,9 @@
+.navbar {
+    background-color: black !important;
+}
+
 #logo {
-    color: #5c0099;
+    color: #f72585;
 }
 
 .nav-link {
@@ -8,5 +12,5 @@
 
 .active {
     background-color: transparent !important;
-    color: #5c0099 !important;
+    color: #f72585 !important;
 }

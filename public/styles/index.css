@@ -11,7 +11,7 @@ body {
 }
 
 .app-name {
-    background: linear-gradient(rgb(188, 12, 241), rgb(92, 0, 153));
+    background: linear-gradient(#f72585, #9616b6);
     background-clip: text;
     -webkit-text-fill-color: transparent;
 }
@@ -27,27 +27,84 @@ body {
     100% { opacity: 1;}
   }
 
-.top-3-markets-title {
-    text-align: center;
+
+.marketSummary {
     color: white;
 }
 
-.top-card {
+.category {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: transparent;
+    color: white !important;
+    border: 1px solid white;
+    border-radius: 10px;
+    margin-top: 10px;
+    margin-left: 10px;
+    height: 100%;
+}
+
+.category > h5 {
+    padding: 5%;
+    margin: 0;
+    color: white I !important;
+}
+
+.category:hover {
+    background-color: #f72585 !important;
+    border: 1px solid #f72585;
+}
+
+.categories-grid > .active {
+    background-color: #f72585 !important;
+    border: 1px solid #f72585;
+}
+
+.market-card {
     background-color: white;
+    text-align: center;
+    margin-top: 10px;
 }
 
-.top-card > .category {
-    color: rgba(92, 0, 153, 0.596);
+.market-card > .category {
+    color: #f72585;
 }
 
-.name {
-    background: linear-gradient(rgb(188, 12, 241), rgb(92, 0, 153));
+.market-name {
+    background: linear-gradient(#f72585, #9616b6);
     background-clip: text;
     -webkit-text-fill-color: transparent;;
 }
 
+.market-price-up {
+    color: rgb(35, 170, 35);
+}
+
+.market-price-down {
+    color: rgb(241, 50, 50);
+}
+
+.market-price-closed {
+    color: black;
+}
+
+.movement-percentage-down {
+    font-size: 0.8em;
+    color: rgb(241, 50, 50) !important;
+}
+
+.movement-percentage-down {
+    font-size: 0.8em;
+    color: rgb(35, 170, 35);
+}
+
+.market-icon {
+    border-radius: 50% !important;
+}
+
 .view-market-button {
-    background: linear-gradient(rgb(188, 12, 241), rgb(92, 0, 153));
+    background:  linear-gradient(#f72585, #9616b6);
     border: none;
 }
 
