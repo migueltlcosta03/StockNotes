@@ -43,6 +43,7 @@ body {
     margin-top: 10px;
     margin-left: 10px;
     height: 100%;
+    cursor: pointer;
 }
 
 .category > h5 {
@@ -54,6 +55,13 @@ body {
 .category:hover {
     background-color: #f72585 !important;
     border: 1px solid #f72585;
+}
+
+.category > form > input {
+    background-color: transparent;
+    border: none;
+    color: white;
+    height: 4vh;
 }
 
 .categories-grid > .active {

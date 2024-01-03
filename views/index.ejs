@@ -46,10 +46,26 @@
     <div class="container text-center">
       <h2 class="marketSummary">Market Summary</h2>
       <div class="row row-cols-auto justify-content-center categories-grid">
-        <div class="col category active"><h5>Stocks</h5></div>
-        <div class="col category"><h5>Indices</h5></div>
-        <div class="col category"><h5>Crypto</h5></div>
-        <div class="col category"><h5>Futures</h5></div>
+        <div class="col category active">
+          <form action="/stocks" method="get">
+            <input type="submit" value="Stocks">
+          </form>
+        </div>
+        <div class="col category">
+          <form action="/indices" method="get">
+            <input type="submit" value="Indices">
+          </form>
+        </div>
+        <div class="col category">
+          <form action="/crypto" method="get">
+            <input type="submit" value="Crypto">
+          </form>
+        </div>
+        <div class="col category">
+          <form action="/futures" method="get">
+            <input type="submit" value="Futures">
+          </form>
+        </div>
       </div>
     </div>
 
