@@ -1,0 +1,52 @@
+    <div class="container">
+      <div class="row d-flex justify-content-center">
+        <div class="col-lg-3 col-md-6">
+          <div class="card mb-3 crypto-card">
+            <div class="row g-0">
+              <div class="col-md-4 text-center crypto-icon-container">
+                <img src="images/icons/crypto/bitcoin.svg" class="crypto-icon" alt="...">
+              </div>
+              <div class="col-md-8">
+                <div class="card-body">
+                  <h5 class="card-title crypto-name">BTCUSD</h5>
+                  <p class="card-text crypto-price crypto-price-up">2021.18</p>
+                  <p class="card-text movement-percentage-up">+3.5%</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6">
+          <div class="card mb-3 crypto-card">
+            <div class="row g-0">
+              <div class="col-md-4 text-center crypto-icon-container">
+                <img src="images/icons/crypto/bitcoin.svg" class="crypto-icon" alt="...">
+              </div>
+              <div class="col-md-8">
+                <div class="card-body">
+                  <h5 class="card-title crypto-name">BTCUSD</h5>
+                  <p class="card-text crypto-price crypto-price-up">2021.18</p>
+                  <p class="card-text movement-percentage-up">+3.5%</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6">
+          <div class="card mb-3 crypto-card">
+            <div class="row g-0">
+              <div class="col-md-4 text-center crypto-icon-container">
+                <img src="images/icons/crypto/bitcoin.svg" class="crypto-icon" alt="...">
+              </div>
+              <div class="col-md-8">
+                <div class="card-body">
+                  <h5 class="card-title crypto-name">BTCUSD</h5>
+                  <p class="card-text crypto-price crypto-price-up">2021.18</p>
+                  <p class="card-text movement-percentage-up">+3.5%</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>

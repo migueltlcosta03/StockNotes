@@ -1,1 +1,1 @@
-# StockNotes
+# CryptoWatch
