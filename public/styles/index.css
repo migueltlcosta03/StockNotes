@@ -10,6 +10,12 @@ body {
     color: white !important;
 }
 
+.slogan > span {
+    background: linear-gradient(#f72585, #9616b6);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
 .app-name {
     background: linear-gradient(#f72585, #9616b6);
     background-clip: text;
@@ -26,6 +32,8 @@ body {
     0% { opacity: 0; }
     100% { opacity: 1;}
   }
+
+
 
 
 .most-traded-cryptos-title {
