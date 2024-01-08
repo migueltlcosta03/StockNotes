@@ -2,8 +2,9 @@ import axios from "axios";
 import { CryptoCompareAPIManager } from "./apis/crypto-compare/ccAPIManager.js";
 
 export class Crypto {
-    constructor(symbol) {
+    constructor(symbol, iconPath) {
         this.setSymbol(symbol);
+        this.setIcon(iconPath);
         this.setPrice(0);
     }
 
@@ -13,6 +14,14 @@ export class Crypto {
 
     setSymbol(newSymbol) {
         this.symbol = newSymbol;
+    }
+    
+    getIcon() {
+        return this.iconPath;
+    }
+
+    setIcon(newIconPath) {
+        this.iconPath = newIconPath;
     }
 
     getPrice() {

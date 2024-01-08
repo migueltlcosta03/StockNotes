@@ -10,15 +10,15 @@ let topCryptos = [];
 
 function getTopCryptos() {
     if (topCryptos.length < 3) {
-        addTopCrypto("BTC");
-        addTopCrypto("ETH");
-        addTopCrypto("SOL");
+        addTopCrypto("BTC", "images/icons/crypto/bitcoin.svg");
+        addTopCrypto("ETH", "images/icons/crypto/ethereum.svg");
+        addTopCrypto("SOL", "images/icons/crypto/solana.svg");
     }
     return topCryptos;
 }
 
-function addTopCrypto(cryptoSymbol) {
-    let topCrypto = new Crypto(cryptoSymbol);
+function addTopCrypto(cryptoSymbol, iconPath) {
+    let topCrypto = new Crypto(cryptoSymbol, iconPath);
     topCryptos.push(topCrypto);
 }
 
