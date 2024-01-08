@@ -9,6 +9,11 @@ app.use(express.static("public"));
 let topCryptos = [];
 
 function getTopCryptos() {
+    if (topCryptos.length < 3) {
+        addTopCrypto("BTC");
+        addTopCrypto("ETH");
+        addTopCrypto("SOL");
+    }
     return topCryptos;
 }
 
@@ -19,10 +24,6 @@ function addTopCrypto(cryptoSymbol) {
 
 app.get("/", async (req, res) => {
     let topCryptos = getTopCryptos();
-    
-    addTopCrypto("BTC");
-    addTopCrypto("ETH");
-    addTopCrypto("SOL");
 
     for (let topCrypto of topCryptos) {
         await topCrypto.getData();
