@@ -54,9 +54,18 @@
                 </div>
                 <div class="col-md-8">
                   <div class="card-body">
-                    <h5 class="card-title crypto-name"><%= topCrypto.getSymbol() %></h5>
-                    <p class="card-text crypto-price crypto-price-up"><%= topCrypto.getPrice() %></p>
-                    <p class="card-text movement-percentage-up">+3.5%</p>
+                    <h5 class="card-title crypto-name"><%= topCrypto.getSymbol() + "USD" %></h5>
+                    <% if (topCrypto.getPrice() > 0) { %>
+                      <p class="card-text crypto-price crypto-price-up"><%= topCrypto.getPrice() %></p>
+                    <%} else {%>
+                      <p class="card-text crypto-price crypto-price-down"><%= topCrypto.getPrice() %></p>
+                    <% } %>
+
+                    <% if (topCrypto.getTrendPercentage() > 0) { %>
+                      <p class="card-text crypto-price trend-percentage-up"><%= topCrypto.getTrendPercentage() %>%</p>
+                    <%} else {%>
+                      <p class="card-text crypto-price trend-percentage-down"><%= topCrypto.getTrendPercentage() %>%</p>
+                    <% } %>
                   </div>
                 </div>
               </div>

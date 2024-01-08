@@ -8,6 +8,14 @@ export class Crypto {
         this.setPrice(0);
     }
 
+    getIcon() {
+        return this.iconPath;
+    }
+
+    setIcon(newIconPath) {
+        this.iconPath = newIconPath;
+    }
+
     getSymbol() {
         return this.symbol;
     }
@@ -15,13 +23,13 @@ export class Crypto {
     setSymbol(newSymbol) {
         this.symbol = newSymbol;
     }
-    
-    getIcon() {
-        return this.iconPath;
+
+    getTrendPercentage() {
+        return this.trendPercentage;
     }
 
-    setIcon(newIconPath) {
-        this.iconPath = newIconPath;
+    setTrendPercentage(newTrendPercentage) {
+        this.trendPercentage = newTrendPercentage;
     }
 
     getPrice() {
@@ -34,18 +42,25 @@ export class Crypto {
 
     async getData() {
         const ccAPIManager = new CryptoCompareAPIManager();
-        const APIKEY = ccAPIManager.getAPIKey();
+        const config = ccAPIManager.getConfig();
+
+        function calcTrendPercentage(openPrice, currentPrice) {
+            const trPercentage = (((currentPrice * 100) / openPrice) - 100).toFixed(2);
+            return trPercentage;
+        }
 
         try {
-            const response = await axios.get(`https://min-api.cryptocompare.com/data/price?fsym=${this.getSymbol()}&tsyms=USD`, {
-                headers: {
-                    Authorization: `Apikey ${APIKEY}`
-                }
-            });
+            const response = await axios.get(`https://min-api.cryptocompare.com/data/pricemultifull?fsyms=${this.getSymbol()}&tsyms=USD`, config);
             const data = response.data;
-            this.setPrice(data["USD"]);
+            
+            let openPrice =  data["RAW"][`${this.getSymbol()}`]["USD"]["OPENDAY"].toFixed(2);
+            let currentPrice = data["RAW"][`${this.getSymbol()}`]["USD"]["PRICE"].toFixed(2);
+
+            this.setPrice(currentPrice);
+            this.setTrendPercentage(calcTrendPercentage(openPrice, currentPrice));
         } catch(error) {
             return error.message;
         }
     }
+
 }
