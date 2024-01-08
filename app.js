@@ -6,22 +6,29 @@ const port = 1812;
 
 app.use(express.static("public"));
 
-app.get("/", async (req, res) => {
-    let topCryptos = []
-    
-    let topCrypto1 = new Crypto("BTC");
-    let topCrypto2 = new Crypto("ETH");
-    let topCrypto3 = new Crypto("SOL");
+let topCryptos = [];
 
-    topCryptos.push(topCrypto1);
-    topCryptos.push(topCrypto2);
-    topCryptos.push(topCrypto3);
+function getTopCryptos() {
+    return topCryptos;
+}
+
+function addTopCrypto(cryptoSymbol) {
+    let topCrypto = new Crypto(cryptoSymbol);
+    topCryptos.push(topCrypto);
+}
+
+app.get("/", async (req, res) => {
+    let topCryptos = getTopCryptos();
+    
+    addTopCrypto("BTC");
+    addTopCrypto("ETH");
+    addTopCrypto("SOL");
 
     for (let topCrypto of topCryptos) {
         await topCrypto.getData();
     }
 
-    res.render("index.ejs", {topCryptos: topCryptos });
+    res.render("index.ejs", { topCryptos: topCryptos });
 })
 
 app.listen(port, () => {

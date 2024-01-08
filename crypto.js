@@ -34,7 +34,7 @@ export class Crypto {
                 }
             });
             const data = response.data;
-            this.setPrice(data["USD"])
+            this.setPrice(data["USD"]);
         } catch(error) {
             return error.message;
         }
